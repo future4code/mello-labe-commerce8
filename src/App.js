@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  Filter,
-  Container,
-  ProductsQuant,
-  Products,
-  Product,
-  Details,
-  Buy,
-} from "./style";
+import { Filter, Container, ProductsQuant, Products, Product } from "./style";
+
+import Produto from "./components/Produto";
+
 const randomicUser = Math.floor(Math.random() * 10);
 
 const products = [
@@ -55,43 +50,47 @@ const products = [
 
 function App() {
   return (
-    <Container>
+    <>
       <ProductsQuant>
-        Quantidade de produtos: {products.length}
+        <p>Quantidade de produtos: {products.length}</p>
         <select name="" id="">
           <option value="cresc">Preço:Crescente</option>
           <option value="desc">Preço:Decrescente</option>
         </select>
       </ProductsQuant>
-      <Filter>
-        <div>
-          <h2>Filtros:</h2>
+      <Container>
+        <Filter>
           <div>
-            <label>Valor Minimo:</label>
-            <input type="text" />
+            <h2>Filtros:</h2>
+            <div>
+              <label>Valor Minimo:</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Valor Maximo:</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Buscar Produto:</label>
+              <input type="text" />
+            </div>
           </div>
-          <div>
-            <label>Valor Maximo:</label>
-            <input type="text" />
-          </div>
-          <div>
-            <label>Buscar Produto:</label>
-            <input type="text" />
-          </div>
-        </div>
-      </Filter>
+        </Filter>
 
-      <Products>
-        {products.map((product) => (
-          <Product>
-            <img src={product.img} />
-            <Details>{product.name}</Details>
-            <Details>R$ {product.price}</Details>
-            <Buy onClick={() => {}}>Adicionar ao Carrinho</Buy>
-          </Product>
-        ))}
-      </Products>
-    </Container>
+        <Products>
+          {products.map((product) => (
+            <Product>
+              <Produto
+                imagemProduto={product.img}
+                nomeProduto={product.name}
+                precoProduto={product.price}
+                onClickBotaoComprar={() => {}}
+              />
+            </Product>
+          ))}
+        </Products>
+      </Container>
+    </>
   );
 }
 

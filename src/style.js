@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 10px;
@@ -36,18 +37,15 @@ export const Filter = styled.div`
   }
 `;
 export const ProductsQuant = styled.div`
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 5px 5px 8px;
+  height: 25px;
   align-items: center;
-  margin-bottom: 10px;
 
   p {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-right: 10px;
   }
 `;
 
