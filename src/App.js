@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Produto from './components/Produto';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Produto
+          imagemProduto={'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Iss-expedition_13-launch.jpg/1200px-Iss-expedition_13-launch.jpg'}
+          nomeProduto={'Foguete Espacial'}
+          precoProduto={'100.000.000'}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
