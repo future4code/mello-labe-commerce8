@@ -1,89 +1,69 @@
 import React from 'react';
+import Produto from './Produto'
+import { Products } from '../style';
 
 
 
-export class Filtro extends React.Component {
-
-        state = {
-
-            listaDeProdutos: [
-            
-               { 
-                id: 1,
-                name: 'foguete',
-                value: '1000',
-                imageUrl: ''
-
-               },
-
-               { 
-                id: 2,
-                name: 'nave',
-                value: '500',
-                imageUrl: ''
-
-               },
-
-            ],
-
-            inputValorMinimo: [ {
-
-              valorMin: ''
-
-            }
-            ],
-
-            inputValorMaximo: [ {
-
-              valorMax: ''
-
-            }
-
-            ]
-        };
-    
+export default class Filtro extends React.Component { 
+  constructor(props){
+    super(props)
+    const {price} = this.props.valor
+    console.log(price)
   }
+  /*
+  comparaProduto = (event) => {
+    console.log(event.target.value)
+    this.state.products.filter(produto => {
+      
+      if(produto.name === event.target.value)
+        return event.target.value
+    })  
+  }*/
 
-  const novoValorMaximo = [...this.state.inputValorMaximo, novoValorMax]
-
-  this.setState({inputValorMaximo : novoValorMaximo})
   
-  const novoValorMinimo = [...this.state.inputValorMinimo, novoValorMin]
 
-  this.setState({inputValorMinimo : novoValorMinimo})
+   handleChange = (event) => {
 
+    if(event.target.value === "1") {
+    let opcao = event.target.value
+    this.props.valor.sort(function(a, b){
+      if(a.price < b.price) return -1
+      if(a.price > b.price) return 1
+      return 0;
+    })
+  }
+   else {
+    let opcao = event.target.value
+    this.props.valor.sort(function(a, b){
+      if(a.price > b.price) return -1
+      if(a.price < b.price) return 1
+      return 0;
+    })
+  
   
 
-  comparaProduto = (produtoDigitado) => {
-    const novaListaDeProdutos = this.state.listaDeProdutos.filter(produto => {
-      return produto.name === produtoDigitado
-    })
-      this.setState({ listaDeProdutos : novaListaDeProdutos
-    })
-        }
+   }
+   console.log(this.props.valor)
 
-    render() {
-      const produtoRenderizado = this.state.novaListaDeProdutos.filter (produto => {
-        const chamaComparaProduto = () => {
-          this.comparaProduto(produto.name)
-      }
-        return (
-           <div className='Filter-container'>
-              <h3>Filtro</h3>
-            
-              <p>Valor Mínimo  
-                <input></input>
-              </p>
-             
-              <p>Valor Máximo
-                <input></input>
-               </p>
-             <p>Buscar Produto
-                <input onChange={chamaComparaProduto}></input>
-             </p>  
+  }
+  render() {
+
+
+    return (
+      <div>
+
+        <select  onChange={this.handleChange}>
+          <option value="">Selecione uma opção</option>
+          <option value="1">Crescente</option>
+          <option value="2">Decrescente</option>
+        </select>
+
+      </div>
+      
+    )
+  }
+}
+
+
+
     
-
-
-        </div>
-       )
-    }
