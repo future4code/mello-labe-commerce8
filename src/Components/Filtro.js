@@ -10,15 +10,7 @@ export default class Filtro extends React.Component {
     const {price} = this.props.valor
     console.log(price)
   }
-  /*
-  comparaProduto = (event) => {
-    console.log(event.target.value)
-    this.state.products.filter(produto => {
-      
-      if(produto.name === event.target.value)
-        return event.target.value
-    })  
-  }*/
+
 
    handleChange = (event) => {
 
