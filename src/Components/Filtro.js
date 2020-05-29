@@ -20,9 +20,6 @@ export default class Filtro extends React.Component {
     })  
   }*/
 
-  ..
-  
-
    handleChange = (event) => {
 
     if(event.target.value === "1") {

@@ -8,7 +8,7 @@ import {
   Details,
   Buy, 
 } from "./style";
-import Filtro from './Components/Filtro'
+import Filtro from './components/Filtro'
 
 const randomicUser = Math.floor(Math.random() * 10);
 
