@@ -20,6 +20,7 @@ export default class Filtro extends React.Component {
     })  
   }*/
 
+  ..
   
 
    handleChange = (event) => {
