@@ -13,7 +13,7 @@
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/last-commit/future4code/mello-labe-commerce8">
 
   <a href="https://www.linkedin.com/in/jonatan-machado/">
-    <img alt="Made by Jerp86" src="https://img.shields.io/badge/made%20by-Jonatan">
+    <img alt="Made by Jonatan" src="https://img.shields.io/badge/made%20by-joninter">
   </a>
 </p>
 
