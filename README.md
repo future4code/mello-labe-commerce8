@@ -1,13 +1,12 @@
 <h1 align="center">
   🚀️ Front-end Web 🛒️ LabeStore  🛍️
 </h1>
-https://github.com/future4code/mello-labe-commerce8
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/joninter/mello-labe-commerce8">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/future4code/mello-labe-commerce8">
 
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joninter/mello-labe-commerce8?logo=javascript">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/future4code/mello-labe-commerce8?logo=javascript">
 
-  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/joninter/mello-labe-commerce8?color=green">
+  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/future4code/mello-labe-commerce8?color=green">
 
   <br>
 
@@ -15,7 +14,7 @@ https://github.com/future4code/mello-labe-commerce8
     <img src="https://app.codacy.com/project/badge/Grade/6dd6b46abeb14e99935a2b9ac5c6ede2"/>
   </a>
 
-  <img alt="GitHub code size in bytes" src="https://github.com/future4code/mello-labe-commerce8">
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/last-commit/future4code/mello-labe-commerce8">
 
   <a href="https://www.linkedin.com/in/jonatan-machado/">
     <img alt="Made by Jerp86" src="https://img.shields.io/badge/made%20by-Jonatan">
@@ -136,10 +135,10 @@ _PS: Caso utilize o NPM, apague o arquivo `yarn.lock` para ter todas as dependê
   <a href="https://www.facebook.com/jonatan.machado68">
     <img alt="Jonatan Machado" src="https://img.shields.io/badge/Facebook-jonatan-machado?style=flat&logoColor=white&logo=facebook">
   </a>
-  <a href="https://www.instagram.com/joninter/">
+  <a href="https://www.instagram.com/jonatan.machado/">
     <img alt="Jonatan Machado" src="https://img.shields.io/badge/Instagram-@joninter?style=flat&logoColor=white&logo=instagram">
   </a>
   <a href="https://twitter.com/joninter">
-    <img alt="Jonatan Machado" src="https://img.shields.io/twitter/follow/jerpbtu?style=flat&logoColor=white&logo=Twitter">
+    <img alt="Jonatan Machado" src="https://img.shields.io/twitter/follow/joninter?style=flat&logoColor=white&logo=Twitter">
   </a>
 </p>
