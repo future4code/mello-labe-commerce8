@@ -78,7 +78,7 @@ export const Filters = styled.div`
 
 export const ProductList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   list-style: none;
 

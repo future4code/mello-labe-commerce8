@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { MdAddShoppingCart, MdShoppingBasket, MdSearch } from "react-icons/md";
 import { formatPrice } from "../../util/format";
+
 import { Container, Cart, ProductList, Search, Filters } from "./styles";
 
 import logo from "../../assets/images/logo.png";
@@ -25,11 +27,59 @@ export default function Home() {
       amount: 0,
     },
     {
-      id: 3,
-      title: "Tênis Nike Revolution 5",
-      price: 229.99,
+      id: 2,
+      title: "Tênis Adidas Lite Racer Cln",
+      price: 229.9,
       image:
-        "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_zoom1.jpg?ts=1571078789&ims=326x",
+        "https://static.netshoes.com.br/produtos/tenis-adidas-lite-racer-cln-masculino/12/COL-7070-012/COL-7070-012_detalhe1.jpg?ts=1584624042?ims=280x280",
+      amount: 0,
+    },
+    {
+      id: 3,
+      title: "Tênis Nike Air Max Oketo",
+      price: 199.99,
+      image:
+        "https://static.netshoes.com.br/produtos/tenis-nike-air-max-oketo-masculino/72/HZM-0636-172/HZM-0636-172_detalhe1.jpg?ts=1579801097?ims=280x280",
+      amount: 0,
+    },
+    {
+      id: 4,
+      title: "Tênis Olympikus Easy Feminino",
+      price: 109.99,
+      image:
+        "https://static.netshoes.com.br/produtos/tenis-olympikus-easy-feminino/10/D22-2763-010/D22-2763-010_detalhe1.jpg?ts=1587075491?ims=280x280",
+      amount: 0,
+    },
+    {
+      id: 5,
+      title: "Tênis Puma Pacer Next Cage",
+      price: 199.99,
+      image:
+        "https://static.netshoes.com.br/produtos/tenis-puma-pacer-next-cage/06/D14-4091-006/D14-4091-006_detalhe1.jpg?ts=1588766597?ims=280x280",
+      amount: 0,
+    },
+    {
+      id: 6,
+      title: "Tênis de Caminha Leve Confortável",
+      price: 79.9,
+      image:
+        "https://static.netshoes.com.br/produtos/tenis-de-caminhada-leve-confortavel/10/E74-0492-010/E74-0492-010_detalhe1.jpg?ts=1586961613?ims=280x280",
+      amount: 0,
+    },
+    {
+      id: 7,
+      title: "Tênis Adidas Lite Racer RBN",
+      price: 279.99,
+      image:
+        "https://static.netshoes.com.br/produtos/tenis-adidas-lite-racer-rbn-masculino/06/COL-7150-006/COL-7150-006_detalhe1.jpg?ts=1584965712?ims=280x280",
+      amount: 0,
+    },
+    {
+      id: 8,
+      title: "Tênis Adidas Run Falcon Masculino",
+      price: 169.99,
+      image:
+        "https://static.netshoes.com.br/produtos/tenis-adidas-run-falcon-masculino/18/COL-6981-018/COL-6981-018_detalhe1.jpg?ts=1584624168?ims=280x280",
       amount: 0,
     },
   ]);
@@ -64,10 +114,12 @@ export default function Home() {
       cartItems[findProduct].amount += 1;
       setCartItems([...cartItems]);
       localStorage.setItem("carrinho", JSON.stringify(cartItems));
+      toast.success("Item adicionado ao carrinho 😀");
     } else {
       products[productIndex].amount += 1;
       setCartItems([...cartItems, products[productIndex]]);
       localStorage.setItem("carrinho", JSON.stringify(cartItems));
+      toast.success("Item adicionado ao carrinho 😀");
     }
   }
 
