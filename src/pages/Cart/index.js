@@ -4,6 +4,7 @@ import {
   MdAddCircleOutline,
   MdDelete,
 } from "react-icons/md";
+import { toast } from "react-toastify";
 
 import { formatPrice } from "../../util/format";
 import Header from "../../components/Header";
@@ -47,6 +48,7 @@ function Cart() {
     const productIndex = item.findIndex((p) => p.id === id);
     if (productIndex !== -1) {
       item.splice(productIndex, 1);
+      toast.error("Item removido do carrinho 😢 ");
     }
     setItem([...item]);
     localStorage.setItem("carrinho", JSON.stringify(item));
